@@ -272,6 +272,8 @@ void FTMSDevice::sendCurrentValues()
         m_currentSpeed = 500;
     }
 
+    qDebug() << "New values sent - cadence: " << m_currentCadence << " power: " << m_currentPower << " speed: " << m_currentSpeed/100;
+
     {
         //               bits 5432109876543210
         quint16 charFlags = 0b0000000001000101; // insta cadance and power + more data
