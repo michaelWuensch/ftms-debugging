@@ -2,6 +2,7 @@
 
 #include <QDataStream>
 #include <QTimer>
+#include <QThread>
 
 #define FTMSDEVICE_FTMS_UUID 0x1826
 #define FTMSDEVICE_INDOOR_BIKE_CHAR_UUID 0x2AD2
@@ -288,6 +289,9 @@ void FTMSDevice::sendCurrentValues()
         Q_ASSERT(characteristic.isValid());
         m_ftmsService->writeCharacteristic(characteristic, charData); // Potentially causes notification.
     }
+
+    // For debugging. Wait the specified number of milliseconds before sending the second package
+    QThread::msleep(0);
 
     {
         //               bits 5432109876543210
