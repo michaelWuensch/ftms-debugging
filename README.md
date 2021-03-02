@@ -1,9 +1,9 @@
 # ftms-debugging
 
 ## requirements
-Linux
-QT Creator
-qt5-connectivity module
+- Linux
+- QT Creator
+- qt5-connectivity module
 
 ## build
 $ qmake FTMSTesting.pro <br>
