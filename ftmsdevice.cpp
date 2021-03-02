@@ -276,6 +276,7 @@ void FTMSDevice::sendCurrentValues()
     qDebug() << "New values sent - cadence: " << m_currentCadence << " power: " << m_currentPower << " speed: " << m_currentSpeed/100;
 
     {
+        // First packet, total length: 6 bytes
         //               bits 5432109876543210
         quint16 charFlags = 0b0000000001000101; // insta cadance and power + more data
 
@@ -294,6 +295,7 @@ void FTMSDevice::sendCurrentValues()
     QThread::msleep(0);
 
     {
+        // Second packet, total length: 4 bytes
         //               bits 5432109876543210
         quint16 charFlags = 0b0000000000000000; // insta speed only, no more data
 
