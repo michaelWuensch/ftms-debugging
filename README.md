@@ -6,11 +6,11 @@
 - qt5-connectivity module
 
 ## setup environment
-$ sudo apt update
+$ sudo apt update<br>
 $ sudo apt install qt5-qmake qtbase5-dev qt5-qmake-bin qtbase5-dev-tools build-essential qtconnectivity5-dev
 
 ## build
-$ qmake FTMSTesting.pro
+$ qmake FTMSTesting.pro<br>
 $ make
 
 ## run
