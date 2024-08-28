@@ -5,8 +5,12 @@
 - QT Creator
 - qt5-connectivity module
 
+## setup environment
+$ sudo apt update
+$ sudo apt install qt5-qmake qtbase5-dev qt5-qmake-bin qtbase5-dev-tools build-essential qtconnectivity5-dev
+
 ## build
-$ qmake FTMSTesting.pro <br>
+$ qmake FTMSTesting.pro
 $ make
 
 ## run
